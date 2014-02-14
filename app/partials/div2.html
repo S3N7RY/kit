@@ -1,0 +1,10 @@
+<div ng-repeat="r in store" ng-class="'container '+ r.name" >
+	{{r.name}}
+	{{r.id}}
+	<div ng-repeat="t in r.items" ng-class="'container '+ t.name" ng-init="over=false" ng-mouseover="over=true;" ng-mouseleave="over=false">
+		<div ng-show="showHelp && over;"data-help-fragment="getHelp(t.name)" show-help="showHelp">{{showHelp}}
+		{{t.name}}
+		</div>
+	</div>
+</div>
+
